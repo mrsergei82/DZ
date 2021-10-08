@@ -1,6 +1,6 @@
 
 
-public class Box<T> {
+public class Box<T extends Fruit> {
     private T obj;
 
     public Box(T obj){
@@ -21,4 +21,8 @@ public class Box<T> {
             System.out.println(obj.length*Orange.waight);
         }
     }
+    //public boolean compare(Box<?> ob){
+
+      //  return false;
+    //}
 }
