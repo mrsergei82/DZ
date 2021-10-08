@@ -1,5 +1,7 @@
 public class Main{
+    public static float boxWaight =0;
     public static void main(String[] args) {
+
         Apple A1 = new Apple();
         Apple A2 = new Apple();
         Apple A3 = new Apple();
@@ -10,16 +12,14 @@ public class Main{
         Orange O1 = new Orange();
         Orange[] oranges = new Orange[1];
         oranges[0] = O1;
-        Box<Fruit> appleBox = new Box<Fruit>();
+        Box<Apple> appleBox = new Box<Apple>(apples);
         appleBox.getWeight(apples);
-        Box<Fruit> orangeBox = new Box<>();
+        Box<Fruit> orangeBox = new Box<>(oranges);
         orangeBox.getWeight(oranges);
-        //orangeBox.compare(appleBox);
-        //appleBox.compare(orangeBox);
 
-
-
-
-
+        orangeBox.compare(appleBox);
+        System.out.println(appleBox.compare(orangeBox));
+        appleBox.compare(orangeBox);
+        System.out.println(orangeBox.compare(appleBox));
     }
 }
