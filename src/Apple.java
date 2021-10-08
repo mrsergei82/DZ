@@ -1,3 +1,3 @@
 public class Apple extends Fruit{
-    float waight = 1.0f;
+    static float waight = 1.0f;
 }
